@@ -1,11 +1,20 @@
-class Box1 extends BaseClass {
-    constructor(x, y, width, height) {
-      super(x,y, width,height);
-      this.image = loadImage("Lol_circle.png");
+class Box1 {
+    constructor(x, y,radius) {
+      var options = {
+        'restitution':0.8,
+        'friction':3.0,
+        'density':1.0
+    }
+    this.body = Bodies.circle(x, y, radius, options, 30);
+    this.radius = radius;
+    World.add(world, this.body);
     }
     display(){
-      super.display;
-     image(this.image, this.body.position.x, this.body.position.y,40,40);
+
+      rectMode(CENTER);
+      fill(251,188,5);
+      strokeWeight(2);
+      circle(this.body.position.x, this.body.position.y,this.radius*2);
     }
   }
   

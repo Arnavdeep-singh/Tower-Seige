@@ -11,10 +11,9 @@ class Ground{
     }
 
     display(){
-        var pos = this.body.position;
         rectMode(CENTER);
         fill(102,43,0);
         strokeWeight(2);
-        rect(pos.x,pos.y,this.width,this.height);
+        rect(this.body.position.x,this.body.position.y,this.width,this.height);
     }
 }
