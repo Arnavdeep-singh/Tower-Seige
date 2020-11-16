@@ -16,5 +16,6 @@ class Box1 {
       strokeWeight(2);
       circle(this.body.position.x, this.body.position.y,this.radius*2);
     }
+    
   }
   

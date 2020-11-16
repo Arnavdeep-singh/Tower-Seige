@@ -35,11 +35,11 @@ function setup() {
 
    bob = new Box1(150,200,20)
    sling = new SlingShot(bob.body, { x: 150, y: 200 });
-
-}
-
-function draw() {
-  
+      
+}      
+      
+function draw() {      
+        
   Engine.update(engine);
   background(255,255,255);  
   drawSprites();
@@ -70,7 +70,11 @@ function mouseDragged() {
 }
 
 function mouseReleased() {
-  sling.fly();
-  
-  
+  sling.fly(); 
+}
+
+function keyPressed() {
+  if (keyCode === 32 ) {
+    sling.attach(bob.body);
+  }
 }
