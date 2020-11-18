@@ -5,6 +5,8 @@ const Constraint = Matter.Constraint;
 
 var bobImg;
 
+var score=0;
+
 function preload(){
 bobImg = loadImage("Lol_circle.png")
 }
@@ -60,6 +62,18 @@ function draw() {
 
   sling.display();
   bob.display();
+
+  block8.score();
+  block9.score();
+  block10.score();
+  block11.score();
+  block12.score();
+  block13.score();
+  block14.score();
+  block15.score();
+  block16.score();
+
+  text("Score: " + score,730,40);
 }
 
 function mouseDragged() {
